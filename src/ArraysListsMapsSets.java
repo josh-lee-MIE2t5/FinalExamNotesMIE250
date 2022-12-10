@@ -11,6 +11,20 @@ public class ArraysListsMapsSets {
         System.out.println(Arrays.toString(x));// prints entire array
         System.out.println(x[1]);// prints 1
 
+        // recall that arrays are pointers so setting array1 equal to array 2 and
+        // changing something in array1 will apply the same changes in array2
+        // to avoid this we make a copy instead of pointing to the same point in memory
+        int[] arr1 = { 1, 2, 3, 4 };
+        int[] arr2 = Arrays.copyOf(arr1, arr1.length);
+        // second param can be longer to allow for new elements that could
+        // be added
+        arr2[2] = 9;
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+        // Output:
+        // [1, 2, 3, 4]
+        // [1, 2, 9, 4]
+
         // ArrayLists
         ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
         cars.add("Volvo");
