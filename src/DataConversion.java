@@ -9,6 +9,14 @@ public class DataConversion {
         System.out.println(j.equals(s));// will be false
         System.out.println(j.equalsIgnoreCase(s));// will be true
 
+        String nickName = s.substring(0, 4);
+        // Output: josh
+
+        String clutter = "    strings are cool     ";
+        clutter.trim();
+        // Output: strings are cool
+        // removes trailing and leading spaces
+
         String numStr = "9.8";
         double numStrToDouble = Double.parseDouble(numStr);
         String numDoubleToStr = Double.toString(numStrToDouble);// same thing can be done with integers just use Integer
